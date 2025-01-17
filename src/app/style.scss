@@ -1,0 +1,26 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #f9f9f9;
+  --text-color: #333;
+  --input-bg: #fff;
+  --input-border: #ddd;
+  --hover-bg-color: #f1f1f1;
+  --icon-color: #666;
+  --hover-icon-color: var(--primary-color);
+  --border-radius: 8px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --info-color: #666;
+  --warning-color: #ff9800;
+  --success-color: #4caf50;
+  --danger-color: #f44336;
+  --light-bg: #fff;
+  --hover-bg: #f1f1f1;
+}
+
+* {
+  font-family: Roboto;
+}
+
+ul {
+  padding-inline-start: 0;
+}
