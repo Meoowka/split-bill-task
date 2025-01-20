@@ -29,7 +29,17 @@ export default {
       'toggleAllUsers'
     ]),
     handleCalculateCost() {
-
+      const invalidProduct = this.products.find(product => product.price === null || product.price <= 0);
+      if(invalidProduct) {
+        this.$notify({
+          title: "Ошибка",
+          text: "Товар не может стоить 0 рублей",
+          type: 'warn',
+          duration: 1000,
+          speed: 1000,
+        });
+        return
+      }
       this.$router.push("/bill");
     },
     remove(id) {
