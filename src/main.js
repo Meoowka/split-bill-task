@@ -7,6 +7,6 @@ import router from "./router/router.js";
 
 createApp(App)
     .use(appStore)
-    .use(router)
     .use(Notifications)
+    .use(router)
     .mount('#app')

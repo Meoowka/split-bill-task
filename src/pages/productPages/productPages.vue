@@ -29,6 +29,7 @@ export default {
       'toggleAllUsers'
     ]),
     handleCalculateCost() {
+
       const invalidProduct = this.products.find(product => product.price === null || product.price <= 0);
       if(invalidProduct) {
         this.$notify({
