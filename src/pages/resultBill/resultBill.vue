@@ -109,13 +109,13 @@ export default {
     >
       Никто ничего не платит
     </h4>
-    <h4 v-else class="info-message" >Пользователи или товары не были добавлены</h4>
+    <h4 v-else class="info-message">Пользователи или товары не были добавлены</h4>
     <router-link
         v-if="user.length && products.length"
         to="/"
         @click.native="clearData"
     >
-      <v-btn  class="link next-btn">
+      <v-btn class="link next-btn">
         Новый чек
       </v-btn>
     </router-link>

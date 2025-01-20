@@ -29,10 +29,6 @@ export default {
       'toggleAllUsers'
     ]),
     handleCalculateCost() {
-      if (!this.products.length) {
-        alert("Сначала добавьте хотя бы один продукт!");
-        return;
-      }
 
       this.$router.push("/bill");
     },
@@ -53,6 +49,7 @@ export default {
       }
       this.editProduct({id: this.editId, name: this.editName.trim(), price: this.editPrice || 0});
       this.editId = null;
+      console.log(this.editPrice);
     },
     add() {
       this.addProduct({name: "", price: null, buyer: 0});
@@ -175,7 +172,7 @@ export default {
     </ul>
     <h4 class="info-message" v-else>Нету добавленных пользователей</h4>
     <v-btn
-        v-if="usersFromStore.length && products.length"
+        v-if="products.length > 0 "
         class="link next-btn"
         @click.prevent="handleCalculateCost"
     >

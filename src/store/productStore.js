@@ -25,7 +25,6 @@ export default {
         //Убрал скобочки и поставил проблеы у buyer
         REMOVE(state, id){
             state.products = state.products.filter(c => c.id !== id);
-            console.log(id)
         },
         EDIT_BUYER(state, {id, buyer}){
             state.products.find(p => p.id === id).buyer = buyer;

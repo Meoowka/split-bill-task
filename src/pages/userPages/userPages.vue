@@ -53,10 +53,6 @@ export default {
       this.$el.querySelector(target).click();
     },
     handleProductAdd() {
-      if (this.usersFromStore.length === 0) {
-        alert("Сначала создайте хотя бы одного пользователя!");
-        return;
-      }
       this.$router.push("/products");
     }
   },
